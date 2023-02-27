@@ -1,0 +1,19 @@
+POST http://127.0.0.1:8000/api/country HTTP/1.1
+
+{
+    "name": "test",
+    "name_en": "test_en",
+    "alias": "test_alias",
+}
+
+
+###
+
+POST http://localhost:3000/api/register HTTP/1.1
+content-type: application/json
+
+{
+  "username": "user {{$randomInt 1 1000}}",
+  "email": "user{{$randomInt 1 1000}}@gmail.com",
+  "password": "password"
+}
